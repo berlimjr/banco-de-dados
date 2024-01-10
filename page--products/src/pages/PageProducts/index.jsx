@@ -38,6 +38,7 @@ const PageProducts = () => {
     const [brands, setBrands] = useState([]);
     const [categories, setCategories] = useState([]);
     const [genders, setGenders] = useState([]);
+    const [filter, setFilters] = useState([]);
     
     async function getBrands(){
         const response = await API.get('brands');
@@ -50,6 +51,12 @@ const PageProducts = () => {
     async function getGenders(){
         const response = await API.get('genders');
         setGenders(response.data);
+    }
+
+    function checkSelectItems(e){
+        let isSelected = e.target.checked;
+        let value = e.target.value;
+        setFilters([...setFilters, value]);
     }
     
     useEffect(() => {
@@ -90,7 +97,12 @@ const PageProducts = () => {
                                 {
                                     brands.map((marca) => (
                                         <li key={marca.brand_id} className="flex gap-2 mb-2">
-                                            <Checkbox id={marca.brand_name}/>
+                                            <Checkbox 
+                                            id={marca.brand_name}
+                                            value={marca.brand_name}
+                                            onChange={(e) => checkSelectItems(e)}
+                                            checked={filters.includes(marca.brand_name)}
+                                            />
                                             <label htmlFor={marca.brand_name}>{marca.brand_name}</label>
                                         </li>
                                     ))
