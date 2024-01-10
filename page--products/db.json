@@ -20,5 +20,37 @@
             "brand_id": 5,
             "brand_name": "Smolder"
         }
+    ],
+    "categories": [
+        {
+            "category_id": 1,
+            "category_name": "Esporte e lazer"
+        },
+        {
+            "category_id": 2,
+            "category_name": "Casual"
+        },
+        {
+            "category_id": 3,
+            "category_name": "Utilitario"
+        },
+        {
+            "category_id": 4,
+            "category_name": "Corrida"
+        }
+    ],
+    "genders": [
+        {
+            "gender_id": 1,
+            "genders_name": "Tens linguiça?"
+        },
+        {
+            "gender_id": 2,
+            "genders_name": "Tens buceta?"
+        },
+        {
+            "gender_id": 3,
+            "genders_name": "Tens os Dois?"
+        }
     ]
 }

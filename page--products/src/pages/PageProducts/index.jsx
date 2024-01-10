@@ -8,6 +8,7 @@ import { RadioButton } from 'primereact/radiobutton';
         
 import { Button } from 'primereact/button';
 import { useEffect, useState } from "react";
+import { API } from "../../services";
 
 const PageProductsContainer = styled.div`
     padding: 40px 100px;
@@ -35,17 +36,26 @@ const PageProducts = () => {
         }
     ]
     const [brands, setBrands] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const [genders, setGenders] = useState([]);
     
-    function getBrands(){
-        fetch('http://localhost:8000/brands')
-        .then(res => res.json())
-        .then(res => {
-            setBrands(res);
-        })
+    async function getBrands(){
+        const response = await API.get('brands');
+        setBrands(response.data);
     }
-
+    async function getCategories(){
+        const response = await API.get('categories');
+        setCategories(response.data);
+    }
+    async function getGenders(){
+        const response = await API.get('genders');
+        setGenders(response.data);
+    }
+    
     useEffect(() => {
         getBrands();
+        getCategories();
+        getGenders();
     }, []);
 
     return (
@@ -79,7 +89,7 @@ const PageProducts = () => {
                             <ul className="list-style-none">
                                 {
                                     brands.map((marca) => (
-                                        <li className="flex gap-2 mb-2">
+                                        <li key={marca.brand_id} className="flex gap-2 mb-2">
                                             <Checkbox id={marca.brand_name}/>
                                             <label htmlFor={marca.brand_name}>{marca.brand_name}</label>
                                         </li>
@@ -88,30 +98,25 @@ const PageProducts = () => {
                             </ul>
                             <h6 className="mb-2 mt-3">Categoria</h6>
                             <ul className="list-style-none">
-                                <li className="flex gap-2 mb-2"><Checkbox id="categoria1"/>
-                                    <label htmlFor="marca1">cat1</label>
-                                </li>
-                                <li className="flex gap-2 mb-2"><Checkbox id="categoria2"/>
-                                    <label htmlFor="marca1">cat3</label>
-                                </li>
-                                <li className="flex gap-2 mb-2"><Checkbox id="categoria3"/>
-                                    <label htmlFor="marca1">cat4</label>
-                                </li>
-                                <li className="flex gap-2 mb-2"><Checkbox id="categoria4"/>
-                                    <label htmlFor="marca1">cat5</label>
-                                </li>
+                                {
+                                    categories.map((categorias) => (
+                                        <li key={categorias.category_id} className="flex gap-2 mb-2">
+                                            <Checkbox id={categorias.category_name}/>
+                                            <label htmlFor={categorias.category_name}>{categorias.category_name}</label>
+                                        </li>
+                                    ))
+                                }
                             </ul>
                             <h6 className="mb-2 mt-3">Gênero</h6>
                             <ul className="list-style-none">
-                                <li className="flex gap-2 mb-2"><Checkbox id="Genero"/>
-                                    <label htmlFor="marca1">Outro</label>
-                                </li>
-                                <li className="flex gap-2 mb-2"><Checkbox id="Genero1"/>
-                                    <label htmlFor="marca1">Homem</label>
-                                </li>
-                                <li className="flex gap-2 mb-2"><Checkbox id="genero2"/>
-                                    <label htmlFor="marca1">Mulher</label>
-                                </li>
+                                {
+                                    genders.map((gen) => (
+                                        <li key={gen.genders_id} className="flex gap-2 mb-2">
+                                            <Checkbox id={gen.genders_name}/>
+                                            <label htmlFor={gen.genders_name}>{gen.genders_name}</label>
+                                        </li>
+                                    ))
+                                }
                             </ul>
                             <h6 className="mb-2 mt-3">Estado</h6>
                             <ul className="list-style-none">
