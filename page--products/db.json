@@ -64,7 +64,9 @@
             "brand_id": 1,
             "brand_name": "Nike",
             "gender_id": 1,
-            "genders_name": "Tens linguiça?"
+            "genders_name": "Tens linguiça?",
+            "review_rate": 5
+
         },
         {
             "product_id": 2,
@@ -76,7 +78,8 @@
             "brand_id": 2,
             "brand_name": "Olimpikus",
             "gender_id": 1,
-            "genders_name": "Tens linguiça?"
+            "genders_name": "Tens linguiça?",
+            "review_rate": 3.4
         },
         {
             "product_id": 3,
@@ -88,7 +91,8 @@
             "brand_id": 2,
             "brand_name": "Balenciaga",
             "gender_id": 1,
-            "genders_name": "Tens buceta?"
+            "genders_name": "Tens buceta?",
+            "review_rate": 4
         }
     ]
 }
