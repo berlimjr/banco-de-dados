@@ -52,5 +52,43 @@
             "gender_id": 3,
             "genders_name": "Tens os Dois?"
         }
+    ],
+    "products": [
+        {
+            "product_id": 1,
+            "product_name": "produto 1",
+            "product_price": 100,
+            "product_discount": 30,
+            "category_id": 1,
+            "category_name": "Esporte e lazer",
+            "brand_id": 1,
+            "brand_name": "Nike",
+            "gender_id": 1,
+            "genders_name": "Tens linguiça?"
+        },
+        {
+            "product_id": 2,
+            "product_name": "produto 2",
+            "product_price": 100,
+            "product_discount": 0,
+            "category_id": 1,
+            "category_name": "Corrida",
+            "brand_id": 2,
+            "brand_name": "Olimpikus",
+            "gender_id": 1,
+            "genders_name": "Tens linguiça?"
+        },
+        {
+            "product_id": 3,
+            "product_name": "produto 3",
+            "product_price": 100,
+            "product_discount": 0,
+            "category_id": 1,
+            "category_name": "Casual",
+            "brand_id": 2,
+            "brand_name": "Balenciaga",
+            "gender_id": 1,
+            "genders_name": "Tens buceta?"
+        }
     ]
 }
