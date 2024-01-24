@@ -56,7 +56,7 @@
     "products": [
         {
             "product_id": 1,
-            "product_name": "produto 1",
+            "product_name": "Tenis bengala adulto",
             "product_price": 100,
             "product_discount": 30,
             "category_id": 1,
@@ -65,12 +65,12 @@
             "brand_name": "Nike",
             "gender_id": 1,
             "genders_name": "Tens linguiça?",
-            "review_rate": 5
-
+            "review_rate": 5,
+            "product_image": "src/components/Product/assets/imgs/b08b289213531bbc7e575c778c41ee6c.webp"
         },
         {
             "product_id": 2,
-            "product_name": "produto 2",
+            "product_name": "Tênis muito pica   ",
             "product_price": 100,
             "product_discount": 0,
             "category_id": 1,
@@ -79,11 +79,12 @@
             "brand_name": "Olimpikus",
             "gender_id": 1,
             "genders_name": "Tens linguiça?",
-            "review_rate": 3.4
+            "review_rate": 3.4,
+            "product_image": "src/components/Product/assets/imgs/cfea894c029abc0fe2a865f4d1b9052f_tn.jfif"
         },
         {
             "product_id": 3,
-            "product_name": "produto 3",
+            "product_name": "Tênis Do oco",
             "product_price": 100,
             "product_discount": 0,
             "category_id": 1,
@@ -92,7 +93,22 @@
             "brand_name": "Balenciaga",
             "gender_id": 1,
             "genders_name": "Tens buceta?",
-            "review_rate": 4
+            "review_rate": 4,
+            "product_image": "src/components/Product/assets/imgs/275eb5b5aff2820db67ae99fd5fbba36253ea0ac_00.jpg"
+        },
+        {
+            "product_id": 4,
+            "product_name": "Tênis Salsicha humana",
+            "product_price": 10000,
+            "product_discount": 60,
+            "category_id": 1,
+            "category_name": "Casual",
+            "brand_id": 1,
+            "brand_name": "Anormal  ",
+            "gender_id": 1,
+            "genders_name": "Tens buceta?",
+            "review_rate": 2.4,
+            "product_image": "https://down-br.img.susercontent.com/file/cn-11134207-7qukw-lileu6qsw4fu22"
         }
     ]
 }
